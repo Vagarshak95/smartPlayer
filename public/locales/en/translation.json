@@ -1,0 +1,18 @@
+{
+  "eng": "ENG",
+  "ru": "RUS",
+  "show_all": "Show all",
+  "show_one": "Show one",
+  "empty_list": "Please, Enter City Name",
+  "feels_like": "feels like",
+  "search": "Search",
+  "input_city": "Input City",
+  "only_letters_error": "Input can be only letters",
+  "empty_string_error": "City Name can not be empty",
+  "oops": "Oooops...",
+  "error": "ERROR",
+  "not_found": "Sorry, page not found",
+  "home_page": "Home Page",
+  "network_error": "Something goes wrong",
+  "city_not_found": "City not found"
+}

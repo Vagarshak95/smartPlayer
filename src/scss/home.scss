@@ -1,0 +1,243 @@
+.app {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 10px;
+  padding: 2rem 3rem;
+  box-sizing: border-box;
+  background: linear-gradient(43deg, rgb(82, 69, 255) 0%, rgb(226, 95, 255) 100%);
+  min-height: 260px;
+  overflow: hidden;
+  margin: 0 15px;
+  &__content {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+
+  //Artyom Done
+
+  &__search-container {
+    margin-bottom: 15px;
+    max-width: 400px;
+    width: 100%;
+  }
+  &__search {
+    display: flex;
+    align-items: center;
+    &-input {
+      backdrop-filter: blur(2px);
+      border-radius: 5px;
+      border: none;
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 10px;
+      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+      outline: none;
+      margin-right: 10px;
+      width: 100%;
+    }
+
+    &-btn {
+      font-family: 'Open Sans', sans-serif;
+      outline: none;
+      backdrop-filter: blur(2px);
+      border-radius: 5px;
+      border: none;
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 10px;
+      color: #fff;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+    &-error {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      line-height: 16px;
+      color: #fff;
+      padding: 5px;
+    }
+  }
+
+  &_empty-list {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    padding: 25px;
+  }
+}
+/////////////
+
+.data__container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dayData {
+  &__location {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+  }
+
+  &__day {
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+  }
+}
+.daysData__container {
+  display: flex;
+  gap: 1rem;
+  max-height: 350px;
+  overflow: auto;
+  
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+}
+.daysData__container::-webkit-scrollbar {
+  width: 8px;
+}
+.daysData__container::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+.daysData__container::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #2743ff;
+  border-radius: 5px;
+}
+
+.degree {
+  display: flex;
+  align-items: center;
+
+  &__number {
+    font-size: 5rem;
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
+    font-family: 'Open Sans', sans-serif;
+  }
+  &__container {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    box-sizing: border-box;
+    border-left: 1px solid rgb(255, 255, 255);
+
+    @media (max-width: 450px) {
+      border-left: none;
+      border-top: 1px solid rgb(255, 255, 255);
+      padding-left: 0;
+      padding-top: 1rem;
+    }
+  }
+  &__title {
+    color: rgb(255, 255, 255);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+  &__subTitlte {
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  @media (max-width: 450px) {
+    flex-direction: column;
+  }
+}
+
+.weather-icon {
+  width: 30%;
+  object-fit: contain;
+}
+
+.menu {
+  width: 120px;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+  background: red;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  transition: 0.33s;
+  top: 0;
+  right: 0;
+
+  &Active {
+    right: -120px;
+  }
+
+  &__btn {
+    background: rgb(255, 255, 255);
+    border: none;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  &__arrow {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    z-index: 5;
+    width: 20px;
+    height: 20px;
+    left: -20px;
+    transform: rotate(45deg);
+    margin: 10px;
+    // padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    // top: -50%;
+    // transform: translate(-50% , -50%);
+  }
+}
+
+.language__block {
+  position: absolute;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+
+  @media (max-width: 450px){
+    top: 90px;
+  }
+
+  &-btn {
+    background: rgb(255, 255, 255);
+    border: none;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      transition: 0.2s ease-in-out;
+      color: rgb(82, 69, 255);
+    }
+
+    &.choosen_language {
+      color: rgb(82, 69, 255);
+    }
+  }
+}
